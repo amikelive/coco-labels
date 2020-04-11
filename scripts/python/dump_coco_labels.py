@@ -1,4 +1,4 @@
-# Copyright 2018-202 Amikelive. All rights reserved
+# Copyright (c) 2020 Amikelive. All rights reserved
 #
 # Licensed under the MIT License found in the LICENSE file in the root directory of this source tree
 '''
