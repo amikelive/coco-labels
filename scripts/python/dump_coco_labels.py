@@ -43,7 +43,7 @@ def extract_annotations(year, target_dir='/tmp'):
     '''
     Extract the annotation zip file based on the dataset release year
     '''
-    print('Downloading and extracting COCO annotations file')
+    print('Downloading and extracting COCO annotations archive file')
 
     try:
         url = download_url(year)
@@ -104,6 +104,8 @@ def main(argv):
             print('id:{}, category:{}, super category:{}'.format(label['id'], label['name'], label['supercategory']))
             count += 1
         print('Total categories/labels: ', count)
+
+        fd.close()
 
 
 if __name__ == "__main__":
