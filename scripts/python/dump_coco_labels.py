@@ -62,13 +62,20 @@ def extract_annotations(year, target_dir='/tmp'):
 
 
 def show_help():
-    print('python dump_coco_labels.py -y <year>')
+    print('Usage: python dump_coco_labels.py -y <year>')
+    print('')
+    print('year options: 2014, 2017')
 
 
 def main(argv):
+    if not argv:
+        show_help()
+        sys.exit(1)
+
     json_file = None
+
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hy:",["help","year="])
+        opts, args = getopt.getopt(argv,"hy:",["help","year="])
     except getopt.GetoptError:
         show_help()
         sys.exit(1)
